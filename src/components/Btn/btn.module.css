@@ -1,0 +1,30 @@
+.btn {
+  color: white;
+  background-color: #f2994a;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.125rem;
+}
+
+.btnLeftBR {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 0;
+}
+
+.btnRightBR {
+  border-top-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 5px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px;
+}
