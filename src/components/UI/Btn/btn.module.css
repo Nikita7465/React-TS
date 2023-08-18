@@ -3,8 +3,10 @@
   background-color: #f2994a;
   border: none;
   border-radius: 0.3125rem;
-  padding: 0.625rem 1.25rem;
+  padding: 20px;
   font-size: 1.125rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btnLeftBR {
@@ -26,5 +28,5 @@
 }
 
 .btn:hover {
-  box-shadow: 0 5px 10px;
+  box-shadow: 0 2px 20px #f2994a;
 }

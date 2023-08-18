@@ -1,0 +1,43 @@
+.footer {
+  background-color: #0f1145;
+  padding: 20px 100px;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footerTitle {
+  color: #f2994a;
+  font-size: 26px;
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+
+.title {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.footerLinkWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

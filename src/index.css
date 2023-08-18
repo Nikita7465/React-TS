@@ -3,6 +3,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  background-color: #0f1145;
   font-family: Rubik;
+  font-weight: 500;
+}
+
+button {
+  text-transform: uppercase;
 }

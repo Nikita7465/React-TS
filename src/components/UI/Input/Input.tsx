@@ -1,11 +1,10 @@
 import React from "react";
-import styles from "./btn.module.css";
+import styles from "./input.module.css";
 
-interface BtnProps {
+interface InputProps {
   secondClass?: string;
-  btnText?: string;
-  type?: "button" | "submit" | "reset" | undefined;
-  onClick?: () => void;
+  type: "text" | "number" | "email" | undefined;
+  pText?: string;
   disabled?: boolean;
   lbr?: boolean;
   rbr?: boolean;
@@ -25,33 +24,31 @@ const rightBR = {
   borderBottomRightRadius: "5px",
 };
 
-const Btn: React.FC<BtnProps> = ({
-  btnText,
+const Input: React.FC<InputProps> = ({
+  pText,
   secondClass,
   type,
-  onClick,
   disabled,
   lbr,
   rbr,
 }) => {
-  let btnStyles = {};
+  let inputStyles = {};
 
   if (lbr) {
-    btnStyles = leftBR;
+    inputStyles = leftBR;
   } else if (rbr) {
-    btnStyles = rightBR;
+    inputStyles = rightBR;
   }
+
   return (
-    <button
-      className={`${styles.btn} ${secondClass}`}
+    <input
+      className={`${styles.input} ${secondClass}`}
       type={type}
-      onClick={onClick}
+      placeholder={pText}
       disabled={disabled}
-      style={btnStyles}
-    >
-      {btnText}
-    </button>
+      style={inputStyles}
+    />
   );
 };
 
-export default Btn;
+export default Input;

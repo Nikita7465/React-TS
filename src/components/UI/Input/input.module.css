@@ -1,9 +1,13 @@
 .input {
-  color: black;
-  background-color: #979797;
+  color: #95a1bb;
+  background-color: #f6f6f620;
   border: none;
   outline: none;
   border-radius: 0.3125rem;
   padding: 0.625rem 1.25rem;
   font-size: 1.125rem;
+}
+
+input::placeholder {
+  color: #ffffff40;
 }

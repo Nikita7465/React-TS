@@ -1,0 +1,32 @@
+.header {
+  background-color: #0f1145;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.navLink {
+  color: #b5b5b5;
+  text-decoration: none;
+}
+
+.btnsWrap {
+  display: flex;
+  gap: 20px;
+}
