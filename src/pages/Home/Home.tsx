@@ -1,11 +1,11 @@
 import React from "react";
-import Btn from "../../components/UI/Btn/Btn";
 import styles from "./home.module.css";
-import Input from "../../components/UI/Input/Input";
+import Btn from "../../components/ui/Btn/Btn";
+import Input from "../../components/ui/Input/Input";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div className="main-wrap">
       <section className={styles.homeTop}>
         <h1 className={styles.homeTopTitle}>
           Many reasons to get up and start to get back in the business
@@ -15,8 +15,8 @@ const Home = () => {
           achieve it.
         </p>
         <div className={styles.homeTopBtns}>
-          <Btn>Learn More</Btn>
-          <Btn>Demo</Btn>
+          <Btn btnText="Learn More" />
+          <Btn btnText="Demo" />
         </div>
         <div className={styles.homeTopVideoWrap}>
           <video src="video.mp4" className={styles.video}></video>
@@ -165,7 +165,7 @@ const Home = () => {
             you and talk about your project.
           </p>
 
-          <Btn>Learn More</Btn>
+          <Btn btnText="Learn More" />
         </div>
         <div className={styles.overviewSecImgWrap}>
           <img
@@ -219,7 +219,7 @@ const Home = () => {
           with startup framework Get Started
         </h2>
 
-        <Btn>Get Started</Btn>
+        <Btn btnText="Get Started" />
       </section>
 
       <section className={styles.investSection}>
@@ -235,7 +235,7 @@ const Home = () => {
             information.
           </p>
 
-          <Btn secondClass={styles.investBtn}>Learn More</Btn>
+          <Btn btnText="Learn More" secondClass={styles.investBtn} />
         </div>
 
         <div className={styles.investImgWrap}>
@@ -298,12 +298,12 @@ const Home = () => {
           <form className={styles.emailForm}>
             <Input
               type="email"
-              pText="Your Email"
+              placeholder="Your Email"
               secondClass={styles.emailInput}
               lbr={true}
             />
 
-            <Btn rbr={true}>Send</Btn>
+            <Btn btnText="Send" rbr={true} />
           </form>
 
           <p className={styles.emailPrompt}>

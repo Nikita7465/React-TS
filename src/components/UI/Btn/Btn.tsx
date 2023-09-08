@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./btn.module.css";
 
 interface BtnProps {
+  btnText: string;
   secondClass?: string;
   type?: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
@@ -9,10 +10,6 @@ interface BtnProps {
   lbr?: boolean;
   rbr?: boolean;
 }
-
-type BtnPropsWithChildren = {
-  children: string;
-} & BtnProps;
 
 const leftBR = {
   borderTopLeftRadius: "5px",
@@ -28,8 +25,8 @@ const rightBR = {
   borderBottomRightRadius: "5px",
 };
 
-const Btn: React.FC<BtnPropsWithChildren> = ({
-  children,
+const Btn: React.FC<BtnProps> = ({
+  btnText,
   secondClass,
   type,
   onClick,
@@ -52,7 +49,7 @@ const Btn: React.FC<BtnPropsWithChildren> = ({
       disabled={disabled}
       style={btnStyles}
     >
-      {children}
+      {btnText}
     </button>
   );
 };

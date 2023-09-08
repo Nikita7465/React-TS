@@ -7,6 +7,10 @@
   font-weight: 500;
 }
 
+.main-wrap {
+  background-color: #0f1145;
+}
+
 button {
   text-transform: uppercase;
 }

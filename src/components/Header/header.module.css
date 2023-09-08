@@ -13,20 +13,36 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .logo {
   margin-right: 30px;
 }
 
-.navLink {
+.nav a {
   color: #b5b5b5;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.btnsWrap {
+.active {
+  border-bottom: 2px solid #99efd0;
+  padding: 6px 0 0;
+}
+
+.signWrap {
   display: flex;
   gap: 20px;
+}
+
+.signWrap a {
+  color: #f2994a;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.signWrap a:hover {
+  opacity: 0.8;
 }

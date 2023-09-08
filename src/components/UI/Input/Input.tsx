@@ -3,8 +3,8 @@ import styles from "./input.module.css";
 
 interface InputProps {
   secondClass?: string;
-  type: "text" | "number" | "email" | undefined;
-  pText?: string;
+  type: "text" | "password" | "email" | undefined;
+  placeholder?: string;
   disabled?: boolean;
   lbr?: boolean;
   rbr?: boolean;
@@ -25,7 +25,7 @@ const rightBR = {
 };
 
 const Input: React.FC<InputProps> = ({
-  pText,
+  placeholder,
   secondClass,
   type,
   disabled,
@@ -44,7 +44,7 @@ const Input: React.FC<InputProps> = ({
     <input
       className={`${styles.input} ${secondClass}`}
       type={type}
-      placeholder={pText}
+      placeholder={placeholder}
       disabled={disabled}
       style={inputStyles}
     />

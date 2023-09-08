@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "../../../node_modules/react-router-dom/dist/index";
-import Btn from "../UI/Btn/Btn";
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -13,25 +12,52 @@ const Header = () => {
               <img src="logo.svg" alt="" className={styles.logoImg} />
             </NavLink>
           </span>
-          <NavLink to={"/about"} className={styles.navLink}>
+
+          <NavLink
+            to={"/about"}
+            className={`${
+              window.location.pathname === "/about" ? styles.active : ""
+            }`}
+          >
             About
           </NavLink>
-          <NavLink to={"/gallery"} className={styles.navLink}>
+          <NavLink
+            to={"/gallery"}
+            className={`${
+              window.location.pathname === "/gallery" ? styles.active : ""
+            }`}
+          >
             Gallery
           </NavLink>
-          <NavLink to={"/pricing"} className={styles.navLink}>
+          <NavLink
+            to={"/pricing"}
+            className={`${
+              window.location.pathname === "/pricing" ? styles.active : ""
+            }`}
+          >
             Pricing
           </NavLink>
-          <NavLink to={"/faq"} className={styles.navLink}>
+          <NavLink
+            to={"/faq"}
+            className={`${
+              window.location.pathname === "/faq" ? styles.active : ""
+            }`}
+          >
             FAQ
           </NavLink>
-          <NavLink to={"/benefits"} className={styles.navLink}>
+          <NavLink
+            to={"/benefits"}
+            className={`${
+              window.location.pathname === "/benefits" ? styles.active : ""
+            }`}
+          >
             Benefits
           </NavLink>
         </nav>
-        <div className={styles.btnsWrap}>
-          <Btn>Sign In</Btn>
-          <Btn>Sign Up</Btn>
+
+        <div className={styles.signWrap}>
+          <NavLink to={"/reg"}>Sign Up</NavLink>
+          <NavLink to={"/auth"}>Sign In</NavLink>
         </div>
       </div>
     </div>

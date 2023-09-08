@@ -1,6 +1,7 @@
 .input {
   color: #95a1bb;
   background-color: #f6f6f620;
+  max-height: 3.75rem;
   border: none;
   outline: none;
   border-radius: 0.3125rem;
