@@ -9,10 +9,10 @@ const Auth = () => {
   const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
 
   const showPassword = () => {
-    setIsShowPassword((prev) => !prev);
+    setIsShowPassword(!isShowPassword);
   };
   return (
-    <div className="main-wrap">
+    <div className="container">
       <div className={styles.auth}>
         <div className={styles.authCard}>
           <h1 className={styles.authTitle}>Authorization</h1>

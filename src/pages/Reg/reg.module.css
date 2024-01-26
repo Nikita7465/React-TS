@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 20px;
 }
 
 .regCard {
@@ -70,4 +71,26 @@
 .authLink {
   color: #9091ae;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .regTitle {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .regTitle {
+    font-size: 40px;
+  }
+
+  .regForm {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 340px) {
+  .regTitle {
+    font-size: 36px;
+  }
 }

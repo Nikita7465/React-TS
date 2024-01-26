@@ -3,11 +3,28 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-family: Rubik;
   font-weight: 500;
 }
 
-.main-wrap {
+body,
+html {
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  background-color: #0f1145;
+  flex: 1;
+}
+
+.container {
   background-color: #0f1145;
 }
 

@@ -5,7 +5,7 @@ import Input from "../../components/ui/Input/Input";
 
 const Home = () => {
   return (
-    <div className="main-wrap">
+    <div className="container">
       <section className={styles.homeTop}>
         <h1 className={styles.homeTopTitle}>
           Many reasons to get up and start to get back in the business
@@ -256,7 +256,7 @@ const Home = () => {
             work faster without limiting creative freedom.
           </p>
           <div className={styles.featureMain}>
-            <div className={styles.featureBlockOne}>
+            <div className={styles.featureBlock}>
               <img
                 src="feature-icon-1.svg"
                 alt=""
@@ -269,7 +269,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className={styles.featureBlockTwo}>
+            <div className={styles.featureBlock}>
               <img
                 src="feature-icon-2.svg"
                 alt=""

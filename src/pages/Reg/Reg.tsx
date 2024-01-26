@@ -9,11 +9,11 @@ const Reg = () => {
   const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
 
   const showPassword = () => {
-    setIsShowPassword((prev) => !prev);
+    setIsShowPassword(!isShowPassword);
   };
 
   return (
-    <div className="main-wrap">
+    <div className="container">
       <div className={styles.reg}>
         <div className={styles.regCard}>
           <h1 className={styles.regTitle}>Registration</h1>

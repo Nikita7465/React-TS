@@ -31,7 +31,7 @@
 
 .homeTopVideoWrap {
   margin-top: 50px;
-  width: max-content;
+  max-width: max-content;
   display: flex;
 }
 
@@ -60,16 +60,14 @@
   color: #6d6d78;
   font-size: 14px;
   text-decoration: none;
-  display: block;
-  margin-top: auto;
-  max-width: max-content;
+  width: max-content;
 }
 
 .logosSection {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 70px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  column-gap: 50px;
   padding: 30px;
 }
 
@@ -85,6 +83,7 @@
 .textSection {
   margin-top: 50px;
   background: url(text-section-bg.png) bottom no-repeat;
+  padding: 20px;
 }
 
 .textSecTitle {
@@ -134,13 +133,15 @@
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
+  padding: 30px;
 }
 
 .overviewSecText {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-right: 20px;
 }
 
 .overviewTitle {
@@ -165,6 +166,7 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
+  padding: 30px;
 }
 
 .descTitle {
@@ -182,9 +184,11 @@
 }
 
 .descMain {
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .descMainBlock {
@@ -209,7 +213,7 @@
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  margin-top: 100px;
+  padding: 60px 20px;
   min-height: 500px;
 }
 
@@ -228,9 +232,10 @@
 
 .investSection {
   background: url(invest-section-bg.png) right no-repeat;
-  padding: 0 200px;
+  padding: 30px;
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -258,11 +263,24 @@
 }
 
 .featureSection {
-  padding: 0 200px;
+  padding: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.featureImgWrap {
+  width: 50%;
+}
+
+.featureImg {
+  width: 100%;
+}
+
+.featureMainWrap {
+  padding: 20px;
 }
 
 .featureTitle {
@@ -300,17 +318,20 @@
 
 .emailSection {
   background: url(email-section-bg.png) center top no-repeat;
-  padding: 50px;
+  padding: 30px;
   margin-top: 80px;
 }
 
 .emailMain {
   max-width: 940px;
-  padding: 50px 100px;
+  padding: 50px;
   margin: 0 auto;
-  background-color: #3c3e7d80;
+  background: #3c3e7d80;
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .emailTitle {
@@ -326,14 +347,15 @@
 }
 
 .emailForm {
-  height: 60px;
+  max-width: 60%;
+  height: max-content;
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
 .emailInput {
-  height: 100%;
+  width: 100%;
 }
 
 .emailPrompt {
@@ -350,8 +372,13 @@
 
 @media (max-width: 1100px) {
   .homeTop {
+    min-height: max-content;
     background: none;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
   }
 
   .homeTopTitle,
@@ -362,7 +389,274 @@
   }
 
   .homeTopBtns {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 30px auto 0;
+  }
+
+  .homeTopVideoWrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .videoTextWrap {
+    text-align: center;
+  }
+
+  .videoPreview {
+    margin: 10px auto;
+  }
+
+  .logosSection {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .descMain {
+    gap: 60px;
+  }
+
+  .featureImgWrap {
+    width: 70%;
+  }
+
+  .emailMain {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  .overviewSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0;
+  }
+
+  .overviewSecText {
+    text-align: center;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .overviewSecImgWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .overviewSecImg {
+    width: 80%;
+  }
+
+  .descTitle {
+    font-size: 30px;
+  }
+
+  .getStartedTitle {
+    font-size: 36px;
+  }
+
+  .investSection {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .investMain {
+    align-items: center;
+    text-align: center;
+  }
+
+  .investImgWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .investImg {
+    width: 80%;
+  }
+
+  .featureSection {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .featureTitle {
+    text-align: center;
+  }
+
+  .featureText {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+
+  .featureImgWrap {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .featureImg {
+    width: 80%;
+  }
+
+  .emailTitle {
+    font-size: 30px;
+  }
+
+  .emailText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .homeTop {
+    padding: 0 40px;
+  }
+  .homeTopTitle {
+    font-size: 36px;
+  }
+
+  .homeTopText {
+    font-size: 16px;
+  }
+
+  .logosSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .textSection {
+    margin-top: 0;
+  }
+
+  .overviewTitle {
+    font-size: 36px;
+  }
+
+  .overviewSecImg {
+    width: 100%;
+  }
+
+  .descSection {
+    padding: 20px;
+  }
+
+  .descTitle {
+    font-size: 26px;
+  }
+
+  .descText {
+    font-size: 14px;
+  }
+
+  .descMain {
+    gap: 40px;
+  }
+
+  .getStartedTitle {
+    font-size: 30px;
+  }
+
+  .investSection {
+    padding: 20px;
+  }
+
+  .investTitle {
+    font-size: 36px;
+  }
+
+  .investText {
+    line-height: 20px;
+  }
+
+  .investImg {
+    width: 100%;
+  }
+
+  .featureImg {
+    width: 100%;
+  }
+
+  .featureTitle {
+    font-size: 22px;
+  }
+
+  .emailForm {
+    max-width: 100%;
+  }
+
+  .emailInput {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .homeTop {
+    padding: 0 20px;
+  }
+  .homeTopTitle {
+    font-size: 30px;
+  }
+
+  .homeTopText {
+    font-size: 14px;
+  }
+
+  .homeTopVideoWrap {
+    margin-top: 30px;
+  }
+
+  .homeTopBtns {
+    flex-direction: column;
+  }
+
+  .videoText {
+    font-size: 14px;
+  }
+
+  .overviewSection {
+    padding: 20px;
+  }
+
+  .getStartedTitle {
+    font-size: 26px;
+  }
+
+  .investTitle {
+    font-size: 30px;
+  }
+
+  .featureTitle {
+    font-size: 20px;
+  }
+
+  .featureMain {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .featureBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .emailTitle {
+    font-size: 26px;
+  }
+
+  .emailMain {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  .logosSection {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
   }
 }
