@@ -1,0 +1,102 @@
+.auth {
+  height: 100vh;
+  background: url(reg-auth-bg.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.authCard {
+  background-color: #3c3e7d60;
+  max-width: max-content;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+}
+
+.authTitle {
+  color: #f2994a;
+  font-size: 4rem;
+  text-shadow: 0 6px 2px #00000080;
+  text-align: center;
+}
+
+.authForm {
+  margin-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  position: relative;
+}
+
+.inputWrap input {
+  width: 100%;
+}
+
+.passInput {
+  padding-right: 3.125rem;
+}
+
+.eyeLabel {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 2.5rem;
+}
+
+.checkPassShow {
+  display: none;
+}
+
+.eye {
+  width: 1.875rem;
+  height: 1.875rem;
+  background: url(eye.svg) center no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.checkPassShow:checked + .eye {
+  background: url(eye-blocked.svg) center no-repeat;
+  background-size: cover;
+}
+
+.regLink {
+  color: #9091ae;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .authTitle {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .authTitle {
+    font-size: 40px;
+  }
+
+  .authForm {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 340px) {
+  .authTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 320px) {
+  .authTitle {
+    font-size: 32px;
+  }
+}

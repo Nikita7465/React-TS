@@ -1,0 +1,38 @@
+.tooltipWrap {
+  width: 20px;
+  height: 20px;
+  background-color: #9091ae;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  cursor: help;
+  position: relative;
+}
+
+.tooltip {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.tooltipText {
+  color: white;
+  font-size: 14px;
+  background-color: #9091ae;
+  border-radius: 5px;
+  padding: 3px;
+  min-width: max-content;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 25px;
+}
+
+.tooltipWrap:hover > .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
