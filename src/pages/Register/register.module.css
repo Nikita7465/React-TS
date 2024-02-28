@@ -23,17 +23,29 @@
 }
 
 .regForm {
-  margin-top: 3.125rem;
+  margin-top: 1.875rem;
   display: flex;
   flex-direction: column;
-  gap: 1.875rem;
+  gap: 0.625rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+}
+
+.validationText {
+  color: tomato;
+  min-height: 20px;
 }
 
 .inputWrap {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  position: relative;
 }
 
 .inputWrap input {
@@ -68,9 +80,15 @@
   background-size: cover;
 }
 
+.regForm button {
+  margin: 20px 0 10px;
+}
+
 .authLink {
+  max-width: max-content;
   color: #9091ae;
   text-align: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
@@ -80,6 +98,10 @@
 }
 
 @media (max-width: 400px) {
+  .regCard {
+    padding: 20px 10px;
+  }
+
   .regTitle {
     font-size: 40px;
   }
@@ -92,5 +114,10 @@
 @media (max-width: 340px) {
   .regTitle {
     font-size: 36px;
+  }
+
+  .validationText {
+    font-size: 14px;
+    min-height: 18px;
   }
 }

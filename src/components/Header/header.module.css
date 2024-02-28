@@ -44,8 +44,20 @@
   opacity: 0.6;
 }
 
+.username {
+  color: #f2994a;
+  font-size: 20px;
+  text-align: center;
+  white-space: wrap;
+  cursor: pointer;
+}
+
+.username:hover {
+  opacity: 0.6;
+}
+
 .mobileNav {
-  background: #f2994a;
+  background: #06023b;
   padding: 50px 20px;
   display: none;
   position: fixed;

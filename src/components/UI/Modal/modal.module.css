@@ -1,0 +1,59 @@
+.blackout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000098;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+.modal {
+  min-width: 300px;
+  background: #06023b;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  color: #b5b5b5;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btnsWrap {
+  display: flex;
+  gap: 30px;
+}
+
+.btnsWrap button {
+  width: 100px;
+}
+
+@media (max-width: 425px) {
+  .modal {
+    min-width: max-content;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .btnsWrap {
+    gap: 20px;
+  }
+
+  .btnsWrap button {
+    font-size: 16px;
+    width: 80px;
+    padding: 10px 5px;
+  }
+}

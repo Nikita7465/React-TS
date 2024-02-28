@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./home.module.css";
 import Btn from "../../components/ui/Btn/Btn";
 import Input from "../../components/ui/Input/Input";
+import Modal from "../../components/ui/Modal/Modal";
 
 const Home = () => {
   return (

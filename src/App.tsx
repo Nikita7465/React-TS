@@ -1,6 +1,5 @@
-import React from "react";
-import { Route, Routes } from "../node_modules/react-router-dom/dist/index";
-
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Gallery from "./pages/Gallery/Gallery";
@@ -8,10 +7,25 @@ import Home from "./pages/Home/Home";
 import Pricing from "./pages/Pricing/Pricing";
 import Faq from "./pages/faq/Faq";
 import Benefits from "./pages/Benefits/Benefits";
-import Reg from "./pages/Reg/Reg";
+import Register from "./pages/Register/Register";
 import Auth from "./pages/Auth/Auth";
+import Cookies from "js-cookie";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const token = Cookies.get("token");
+
+  useEffect(() => {
+    if (
+      token &&
+      (location.pathname === "/register" || location.pathname === "/auth")
+    ) {
+      navigate("/notfound");
+    }
+  }, [token, location.pathname, navigate]);
+
   return (
     <Routes>
       <Route
@@ -62,8 +76,9 @@ function App() {
           </Layout>
         }
       />
-      <Route path="/reg" element={<Reg />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/auth" element={<Auth />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
