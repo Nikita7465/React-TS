@@ -1,13 +1,31 @@
 import React, { useState } from "react";
 import { NavLink } from "../../../node_modules/react-router-dom/dist/index";
+import Cookies from "js-cookie";
 import styles from "./header.module.css";
+import Modal from "../ui/Modal/Modal";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const switchModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const logout = () => {
+    const cookies = Cookies.get();
+
+    for (const cookie in cookies) {
+      Cookies.remove(cookie);
+    }
+  };
+
+  const username = Cookies.get("username");
 
   return (
     <div className="container">
@@ -132,10 +150,29 @@ const Header = () => {
         </nav>
 
         <div className={styles.regAndAuthWrap}>
-          <NavLink to={"/reg"}>Sign Up</NavLink>
-          <NavLink to={"/auth"}>Sign In</NavLink>
+          {username ? (
+            <h5 className={styles.username} onClick={switchModal}>
+              {username}
+            </h5>
+          ) : (
+            <>
+              <NavLink to={"/register"}>Sign Up</NavLink>
+              <NavLink to={"/auth"}>Sign In</NavLink>
+            </>
+          )}
         </div>
       </header>
+      {isModalOpen && (
+        <Modal
+          text="Log out of the account?"
+          type="confirm"
+          onCancel={switchModal}
+          onConfirm={() => {
+            switchModal();
+            logout();
+          }}
+        />
+      )}
     </div>
   );
 };

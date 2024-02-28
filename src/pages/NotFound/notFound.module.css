@@ -1,0 +1,32 @@
+.notFound {
+  width: 100dvw;
+  height: 100dvh;
+  background: url(reg-auth-bg.png) center no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+  color: #f2994a;
+  font-size: 10dvw;
+}
+
+.notFound a {
+  color: white;
+  background-color: #f2994a;
+  max-height: 3.75rem;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 10px;
+  font-size: 1.125rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.notFound a:hover {
+  box-shadow: 0 2px 20px #f2994a;
+}

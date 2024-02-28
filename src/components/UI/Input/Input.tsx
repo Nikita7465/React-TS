@@ -8,6 +8,9 @@ interface InputProps {
   disabled?: boolean;
   lbr?: boolean;
   rbr?: boolean;
+  name?: string;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const leftBR = {
@@ -31,6 +34,9 @@ const Input: React.FC<InputProps> = ({
   disabled,
   lbr,
   rbr,
+  name,
+  value,
+  onChange,
 }) => {
   let inputStyles = {};
 
@@ -47,6 +53,9 @@ const Input: React.FC<InputProps> = ({
       placeholder={placeholder}
       disabled={disabled}
       style={inputStyles}
+      name={name}
+      value={value}
+      onChange={onChange}
     />
   );
 };
